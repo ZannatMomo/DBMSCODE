@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Heart Health Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Comprehensive Heart Health Monitoring System</h1>
+             
+            <ul>
+                <li><a href="#" onclick="showSection('doctor-info')">Doctor Info</a></li>
+                <li><a href="#" onclick="showSection('get-appointment')">Get Appointment</a></li>
+                <li><a href="#" onclick="showSection('view-appointment')">View Appointment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content" id="doctor-info" style="display: none;">
+        <div class="container">
+            <h2>Physician Information</h2>
+            <div class="doctor-details">
+                <img src="images/Dr. John Doe.jpg" alt="Dr. John Doe" class="doctor-photo">
+                <h3>Dr. John Doe</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Location:</strong> ABC Hospital, Dhaka</p>
+                <p><strong>Appointment Schedule:</strong> Mon, Wed, Fri - 10:00 AM to 2:00 PM</p>
+                <p><strong>Availability:</strong> Free on Mon and Wed</p>
+            </div>
+            <hr>
+            <div class="doctor-details">
+                <img src="images/Dr. Jane Smith.jpg" alt="Dr. Jane Smith" class="doctor-photo">
+                <h3>Dr. Jane Smith</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Location:</strong> XYZ Clinic, Chittagong</p>
+                <p><strong>Appointment Schedule:</strong> Tue, Thu - 11:00 AM to 3:00 PM</p>
+                <p><strong>Availability:</strong> Free on Tue</p>
+            </div>
+            <hr>
+            <div class="doctor-details">
+                <img src="images/Dr. Alice Brown.jpg" alt="Dr. Alice Brown" class="doctor-photo">
+                <h3>Dr. Alice Brown</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Location:</strong> DEF Hospital, Khulna</p>
+                <p><strong>Appointment Schedule:</strong> Mon, Thu - 9:00 AM to 1:00 PM</p>
+                <p><strong>Availability:</strong> Free on Mon</p>
+            </div>
+            <hr>
+            <div class="doctor-details">
+                <img src="images/Dr. Robert White.jpg" alt="Dr. Robert White" class="doctor-photo">
+                <h3>Dr. Robert White</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Location:</strong> GHI Clinic, Rajshahi</p>
+                <p><strong>Appointment Schedule:</strong> Wed, Fri - 10:00 AM to 3:00 PM</p>
+                <p><strong>Availability:</strong> Free on Wed</p>
+            </div>
+            <hr>
+            <div class="doctor-details">
+                <img src="images/Dr. Emily Davis.jpg" alt="Dr. Emily Davis" class="doctor-photo">
+                <h3>Dr. Emily Davis</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Location:</strong> JKL Hospital, Sylhet</p>
+                <p><strong>Appointment Schedule:</strong> Tue, Fri - 1:00 PM to 4:00 PM</p>
+                <p><strong>Availability:</strong> Free on Fri</p>
+            </div>
+            <hr>
+            <div class="doctor-details">
+                <img src="images/Dr. Michael Johnson.jpeg" class="doctor-photo">
+                <h3>Dr. Michael Johnson</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Location:</strong> MNO Clinic, Barisal</p>
+                <p><strong>Appointment Schedule:</strong> Mon, Wed - 11:00 AM to 3:00 PM</p>
+                <p><strong>Availability:</strong> Free on Mon and Wed</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="get-appointment" style="display: none;">
+        <div class="container">
+            <h2>Book an Appointment</h2>
+            <form action="/submit-appointment" method="POST">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+                
+                <label for="doctor-name">Doctor:</label>
+                <select id="doctor-name" name="doctor-name" required>
+                    <option value="Dr. John Doe">Dr. John Doe</option>
+                    <option value="Dr. Jane Smith">Dr. Jane Smith</option>
+                    <option value="Dr. Alice Brown">Dr. Alice Brown</option>
+                    <option value="Dr. Robert White">Dr. Robert White</option>
+                    <option value="Dr. Emily Davis">Dr. Emily Davis</option>
+                    <option value="Dr. Michael Johnson">Dr. Michael Johnson</option>
+                </select>
+                
+                <label for="appointment-date">Appointment Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+                
+                <label for="appointment-time">Appointment Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+                
+                <label for="patient-condition">Patient Condition:</label>
+                <textarea id="patient-condition" name="patient-condition" required></textarea>
+                
+                <label for="last-visit-date">Last Visit Date:</label>
+                <input type="date" id="last-visit-date" name="last-visit-date">
+                
+                <label for="test-reports">Test Reports:</label>
+                <input type="file" id="test-reports" name="test-reports" multiple>
+                
+                <label for="prescription">Prescription:</label>
+                <input type="file" id="prescription" name="prescription">
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="content" id="view-appointment" style="display: none;">
+        <div class="container">
+            <h2>View Appointments</h2>
+            <div class="appointment-details">
+                <h3>Upcoming Appointments</h3>
+                <p><strong>Patient Name:</strong> John Smith</p>
+                <p><strong>Doctor:</strong> Dr. John Doe</p>
+                <p><strong>Date:</strong> 2024-07-01</p>
+                <p><strong>Time:</strong> 10:30 AM</p>
+                <p><strong>Location:</strong> ABC Hospital, Dhaka</p>
+                <hr>
+                <h3>Past Appointments</h3>
+                <p><strong>Patient Name:</strong> John Smith</p>
+                <p><strong>Doctor:</strong> Dr. John Doe</p>
+                <p><strong>Date:</strong> 2024-06-01</p>
+                <p><strong>Time:</strong> 11:00 AM</p>
+                <p><strong>Location:</strong> ABC Hospital, Dhaka</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('doctor-info').style.display = 'none';
+            document.getElementById('get-appointment').style.display = 'none';
+            document.getElementById('view-appointment').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
